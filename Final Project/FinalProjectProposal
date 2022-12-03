@@ -1,0 +1,18 @@
+Name of project: LisasConcertFinder
+
+Type of project: API Client (A) 
+
+Brief description of the purpose: The purpose of this package is to search for an artist, and find concerts for that artist or artists related to that artist in cities across America.
+
+Links to data sources / API etc.: 
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist
+https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2
+
+Authentication: Both APIs require registration and API keys
+
+Outline the technical steps / challenges you plan to address and include in your submission:
+I will have the user enter an artist name and city, and then using the Ticket Master Event Search Get request, I will use the artist name and city to search for events.  This request will return information about an event, if there is one. If there is an event, I will also use the Get Artist request from the Spotify API to return information about the artist. 
+
+If the artist is not having a concert in that city, I will use the Spotify Get Artist’s Related Artists to find a related artist. Using the returned related artists function, I will use the Ticket Master Event Search Get request to return concerts in that city for the related artists. I will also use the Get Artist request from Spotify to return information about the related artists.  
+
+Are there any significant hurdles that you have doubts about? Would not solving them render the project incomplete?: I am nervous about connecting to two different APIs, and using information from one to get requests from the other. 
